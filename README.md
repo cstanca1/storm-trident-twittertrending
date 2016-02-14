@@ -98,10 +98,10 @@ C:\Storm\apache-storm-0.10.0\bin\storm jar TwitterTrending-1.0-SNAPSHOT-jar-with
 
 On the cluster, it can be submitted similarly, but since Storm is already there, storm depedency in the packaged jar should be excluded and storm classpath from the server should be added.
 
-Putty to HN-133
+Example submit topology to HDP 2.3 cluster:
 ```
 sudo -u storm -s
-/usr/hdp/2.3.4.0-3485/storm/bin/storm jar /home/storm/TwitterTrending-1.0-SNAPSHOT-nostorm.jar com.cristi.storm.TwitterTrendingTopology
+/usr/hdp/2.3.4.0-3485/storm/bin/storm jar /home/storm/TwitterTrending-1.0-SNAPSHOT-nostorm.jar com.cristi.storm.TwitterTrendingTopology -c nimbus.host=ip-172-31-56-133.ec2.internal
 ```
 
 ## Useful links:
